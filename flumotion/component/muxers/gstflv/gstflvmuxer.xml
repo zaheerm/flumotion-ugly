@@ -1,0 +1,43 @@
+<registry>
+  <components>
+
+    <component type="gst-flv-muxer" base="flumotion/component/muxers/gstflv"
+               _description="Muxes encoded feeds into an flv feed.">
+      <source location="flumotion.component.muxers.gstflv.gstflv"/>
+      <feeder name="default"/>
+      <eater name="default" multiple="yes"/>
+      <entries>
+        <entry type="component" location="gstflv.py"
+               function="GstFlv"/>
+        <entry type="wizard" location="wizard_gtk.py"
+               function="GstFlvWizardPlugin"/>
+      </entries>
+      <wizard _description="Flv" type="muxer"
+              feeder="default" eater="default">
+        <accept-format media-type="mp3"/>
+        <accept-format media-type="aac"/>
+        <accept-format media-type="h264"/>
+        <provide-format media-type="flv" />
+      </wizard>
+    </component>
+
+  </components>
+
+  <bundles>
+    <bundle project="ugly" name="gst-flv-muxer">
+        <dependencies>
+            <dependency name="component" />
+            <dependency name="muxers-base" />
+        </dependencies>
+
+        <directories>
+            <directory name="flumotion/component/muxers/gstflv">
+                <filename location="__init__.py" />
+                <filename location="gstflv.py" />
+                <filename location="wizard_gtk.py" />
+            </directory>
+        </directories>
+    </bundle>
+  </bundles>
+
+</registry>

@@ -1,0 +1,55 @@
+<registry>
+
+  <components>
+
+    <component type="x264-encoder" base="flumotion/component/encoders/x264"
+               _description="Encodes a raw video feed using x264." >
+      <source location="flumotion.component.encoders.x264.x264" />
+      <eater name="default" />
+      <feeder name="default" />
+      <entries>
+        <entry type="component" location="x264.py"
+               function="X264"/>
+        <entry type="wizard" location="wizard_gtk.py"
+               function="X264WizardPlugin"/>
+      </entries>
+
+      <wizard _description="x264" type="video-encoder"
+              feeder="default" eater="default">
+        <provide-format media-type="h264" />
+      </wizard>
+      <properties>
+        <property name="bitrate" type="int"
+                  _description="The bit rate to encode at (in bps)." />
+        <property name="keyframe-maxdistance" type="int"
+                  _description="The maximum distance between key frames (in frames)." />
+        <property name="option-string" type="string"
+                  _description="Custom parameters to pass to x264 encoder." />
+        <property name="quality" type="int"
+                  _description="Speed/quality tradeoff." />
+      </properties>
+
+    </component>
+
+  </components>
+
+  <bundles>
+
+    <bundle project="ugly" name="x264-component">
+        <dependencies>
+            <dependency name="component" />
+            <dependency name="worker-checks" />
+        </dependencies>
+
+        <directories>
+            <directory name="flumotion/component/encoders/x264">
+                <filename location="__init__.py"/>
+                <filename location="x264.py" />
+                <filename location="wizard_gtk.py" />
+                <filename location="wizard.glade" />
+            </directory>
+        </directories>
+    </bundle>
+  </bundles>
+
+</registry>

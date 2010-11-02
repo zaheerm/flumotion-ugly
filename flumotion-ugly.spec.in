@@ -1,0 +1,47 @@
+Name:           @PACKAGE@
+Version:        @VERSION@
+Release:        @RELEASE@
+Summary:        Flumotion Ugly
+
+Group:          Applications/Internet
+License:	GPL
+URL:            http://github.com/zaheerm/flumotion-ugly/
+Source:         %{name}-%{version}.tar.bz2
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
+
+Requires:	flumotion >= 0.8.0
+
+BuildRequires:	gettext
+BuildRequires:	python >= 2.4
+#BuildRequires:	epydoc
+BuildArch:	noarch
+
+%description
+Flumotion Ugly.
+
+%prep
+%setup -q
+
+%build
+%configure
+
+make
+
+%install
+rm -rf $RPM_BUILD_ROOT
+
+%makeinstall
+
+%find_lang flumotion-ugly
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files -f flumotion-ugly.lang
+%defattr(-,root,root,-)
+%doc ChangeLog COPYING README AUTHORS LICENSE.GPL
+%{_libdir}/flumotion
+
+%changelog
+* Tue Oct 02 2010 Zaheer Abbas Merali <zaheerabbas at merali dot org>
+- first spec

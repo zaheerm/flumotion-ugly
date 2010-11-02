@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-10-30 15:13+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: flumotion/component/encoders/x264/wizard.glade:6
+msgid "window1"
+msgstr ""
+
+#: flumotion/component/encoders/x264/wizard.glade:18
+msgid "kbit/s"
+msgstr ""
+
+#: flumotion/component/encoders/x264/wizard.glade:73
+msgid ""
+"A shorter time between key frames reduces playback latency at the cost of a "
+"higher bit rate or lower quality."
+msgstr ""
+
+#: flumotion/component/encoders/x264/wizard.glade:90
+msgid "seconds"
+msgstr ""
+
+#: flumotion/component/encoders/x264/wizard.glade:103
+msgid "Time between _key frames:"
+msgstr ""
+
+#: flumotion/component/encoders/x264/wizard.glade:118
+msgid "Option string:"
+msgstr ""
+
+#: flumotion/component/encoders/x264/wizard.glade:145
+msgid "Advanced settings"
+msgstr ""
+
+#: flumotion/component/encoders/x264/wizard.glade:165
+msgid "Bitrate:"
+msgstr ""
+
+#: flumotion/component/encoders/x264/wizard.glade:175
+msgid "Quality:"
+msgstr ""

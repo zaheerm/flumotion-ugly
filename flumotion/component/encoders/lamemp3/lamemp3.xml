@@ -1,0 +1,49 @@
+<registry>
+
+  <components>
+
+    <component type="lamemp3-encoder" base="flumotion/component/encoders/lamemp3"
+               _description="Encodes a raw audio feed using the LAME mp3 encoder." >
+      <source location="flumotion.component.encoders.lamemp3.lamemp3" />
+      <eater name="default" />
+      <feeder name="default" />
+      <entries>
+        <entry type="component" location="lamemp3.py"
+               function="LameMp3"/>
+        <entry type="wizard" location="wizard_gtk.py"
+               function="LameMp3WizardPlugin"/>
+      </entries>
+
+      <wizard _description="lame mp3" type="audio-encoder"
+              feeder="default" eater="default">
+        <provide-format media-type="mp3" />
+      </wizard>
+      <properties>
+        <property name="bitrate" type="int"
+                  _description="The bit rate to encode at (in bps)." />
+      </properties>
+
+    </component>
+
+  </components>
+
+  <bundles>
+
+    <bundle project="ugly" name="lamemp3-component">
+        <dependencies>
+            <dependency name="component" />
+            <dependency name="worker-checks" />
+        </dependencies>
+
+        <directories>
+            <directory name="flumotion/component/encoders/lamemp3">
+                <filename location="__init__.py"/>
+                <filename location="lamemp3.py" />
+                <filename location="wizard_gtk.py" />
+                <!-- <filename location="wizard.glade" /> -->
+            </directory>
+        </directories>
+    </bundle>
+  </bundles>
+
+</registry>
