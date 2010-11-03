@@ -1,5 +1,10 @@
+flumotion-ugly (0.8.0-2) maverick; urgency=low
+
+  * Fix maintainer email.
+
+ -- Zaheer Abbas Merali <zaheerabbas@merali.org>  Fri, 5 Nov 2010 00:44:30 +0000
 flumotion-ugly (0.8.0-1) maverick; urgency=low
 
   * New upstream release!
 
- -- Zaheer Abbas Merali <zaheermerali@gmail.com>  Thu, 4 Nov 2010 23:11:21 +0000
+ -- Zaheer Abbas Merali <zaheerabbas@merali.org>  Thu, 4 Nov 2010 23:11:21 +0000

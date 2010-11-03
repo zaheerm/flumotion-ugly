@@ -1,7 +1,7 @@
 Source: flumotion-ugly
 Section: net
 Priority: optional
-Maintainer: Zaheer Abbas Merali <zaheerabbas at merali dot org>
+Maintainer: Zaheer Abbas Merali <zaheerabbas@merali.org>
 Build-Depends: cdbs,
                debhelper (>= 5.0.37.2),
                pkg-config,
