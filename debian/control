@@ -1,0 +1,40 @@
+Source: flumotion-ugly
+Section: net
+Priority: optional
+Maintainer: Zaheer Abbas Merali <zaheerabbas at merali dot org>
+Build-Depends: cdbs,
+               debhelper (>= 5.0.37.2),
+               pkg-config,
+	       intltool (>= 0.34.2),
+               python-twisted (>= 2.5.0),
+               flumotion (>= 0.8.0),
+               python-gst0.10 (>= 0.10.1),
+               python,
+               python-dev,
+               python-central (>= 0.5),
+               autotools-dev
+Standards-Version: 3.7.3
+XS-Python-Version: >= 2.5
+
+Package: flumotion-ugly
+Architecture: any
+Depends: ${python:Depends},
+         ${misc:Depends},
+         ${shlibs:Depends},
+         gstreamer0.10-plugins-base,
+         gstreamer0.10-plugins-ugly-multiverse (>= 0.10.16),
+         gstreamer0.10-plugins-good (>= 0.10.16),
+         gstreamer0.10-plugins-good (>= 0.10.25),
+	 python-glade2,
+         python-gobject,
+         python-gst0.10 (>= 0.10.0.1),
+         python-gtk2 (>= 2.4.0),
+	 python-kiwi (>= 1.9.14),
+	 python-cairo (>= 1.2.0),
+         python-openssl,
+         python-twisted-core (>= 2.5.0),
+         ssl-cert (>= 1.0-11),
+         xsltproc
+Recommends: python-gnome2
+XB-Python-Version: ${python:Versions}
+Description: Set of components for streaming flv, h264, mp3, aac in flumotion.
