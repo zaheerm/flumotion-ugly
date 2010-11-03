@@ -23,7 +23,10 @@ __version__ = "$Rev: 8561 $"
 class Faac(feedcomponent.EncoderComponent):
 
     def get_pipeline_string(self, properties):
-        return 'audioconvert ! audioresample ! faac name=encoder'
+        frmt = properties.get('adts', False) and 1 or 0
+
+        return ("audioconvert ! audioresample ! faac name=encoder "
+                "outputformat=%d" % frmt)
 
     def configure_pipeline(self, pipeline, properties):
         element = pipeline.get_by_name('encoder')

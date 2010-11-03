@@ -60,6 +60,9 @@ class FaacStep(AudioEncoderStep):
 
         self.add_proxy(self.model.properties, ['bitrate'])
 
+        if self.wizard.getStep('Encoding').getMuxerFormat() == 'aac':
+            self.model.properties.adts = True
+
     def workerChanged(self, worker):
         self.model.worker = worker
         self.wizard.requireElements(worker, 'faac')

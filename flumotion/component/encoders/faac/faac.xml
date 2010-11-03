@@ -21,6 +21,8 @@
       <properties>
         <property name="bitrate" type="int"
                   _description="The bit rate to encode at (in bps)." />
+        <property name="adts" type="bool"
+                  _description="Enable or not ADTS output (disabled by default)" />
       </properties>
 
     </component>

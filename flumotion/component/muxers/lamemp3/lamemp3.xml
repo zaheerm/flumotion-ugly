@@ -1,0 +1,43 @@
+<registry>
+
+  <components>
+    <component type="lamemp3-muxer"
+               base="flumotion/component/muxers/lamemp3"
+               _description="Repeater muxer to allow mp3 without container.">
+      <source location="flumotion.component.muxers.lamemp3.lamemp3" />
+
+      <eater name="default" multiple="yes" />
+      <feeder name="default" />
+
+      <entries>
+        <entry type="component" location="mp3.py"
+               function="LameMp3Muxer" />
+      </entries>
+
+      <wizard _description="MP3" type="muxer"
+              feeder="default" eater="default">
+        <accept-format media-type="audio:mp3"/>
+        <provide-format media-type="mp3"/>
+      </wizard>
+
+    </component>
+  </components>
+
+  <bundles>
+
+    <bundle project="ugly" name="lamemp3muxer-component">
+        <dependencies>
+            <dependency name="component" />
+        </dependencies>
+
+        <directories>
+            <directory name="flumotion/component/muxers/lamemp3">
+                <filename location="__init__.py" />
+                <filename location="lamemp3.py" />
+            </directory>
+        </directories>
+    </bundle>
+
+  </bundles>
+
+</registry>
