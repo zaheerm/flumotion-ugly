@@ -1,3 +1,13 @@
+flumotion-ugly (0.8.0-4) maverick; urgency=low
+
+  * Fix more deps.
+
+ -- Zaheer Abbas Merali <zaheerabbas@merali.org>  Fri, 5 Nov 2010 21:34:30 +0000
+flumotion-ugly (0.8.0-3) maverick; urgency=low
+
+  * Fix deps.
+
+ -- Zaheer Abbas Merali <zaheerabbas@merali.org>  Fri, 5 Nov 2010 12:44:30 +0000
 flumotion-ugly (0.8.0-2) maverick; urgency=low
 
   * Fix maintainer email.

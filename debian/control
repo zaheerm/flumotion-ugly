@@ -23,7 +23,7 @@ Depends: ${python:Depends},
          ${shlibs:Depends},
          gstreamer0.10-plugins-base,
          gstreamer0.10-plugins-ugly-multiverse (>= 0.10.16),
-         gstreamer0.10-plugins-good (>= 0.10.16),
+         gstreamer0.10-plugins-bad-multiverse (>= 0.10.20),
          gstreamer0.10-plugins-good (>= 0.10.25),
 	 python-glade2,
          python-gobject,
@@ -33,8 +33,7 @@ Depends: ${python:Depends},
 	 python-cairo (>= 1.2.0),
          python-openssl,
          python-twisted-core (>= 2.5.0),
-         ssl-cert (>= 1.0-11),
-         xsltproc
+         flumotion (>= 0.8.0)
 Recommends: python-gnome2
 XB-Python-Version: ${python:Versions}
 Description: Set of components for streaming flv, h264, mp3, aac in flumotion.
