@@ -79,6 +79,8 @@ flumotion/component/encoders/lamemp3/Makefile
 flumotion/component/encoders/faac/Makefile
 flumotion/component/muxers/Makefile
 flumotion/component/muxers/gstflv/Makefile
+flumotion/component/muxers/lamemp3/Makefile
+flumotion/component/muxers/faac/Makefile
 flumotion/project/Makefile
 flumotion/project/ugly.py
 misc/Makefile
