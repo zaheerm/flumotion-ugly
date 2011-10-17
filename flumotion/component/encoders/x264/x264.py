@@ -41,3 +41,5 @@ class X264(feedcomponent.EncoderComponent):
                properties['keyframe-maxdistance'])
         if 'option-string' in properties:
             element.set_property('option-string', properties['option-string'])
+        if 'byte-stream' in properties:
+            element.set_property('byte-stream', properties['byte-stream'])
