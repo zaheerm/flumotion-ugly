@@ -29,6 +29,8 @@
                   _description="Speed/quality tradeoff." />
         <property name="byte-stream" type="bool"
                   _description="Generate byte stream format of NALU" />
+        <property name="profile" type="string"
+                  _description="Encoding profile." />
       </properties>
 
     </component>

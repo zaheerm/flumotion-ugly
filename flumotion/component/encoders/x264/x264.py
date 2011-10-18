@@ -15,22 +15,31 @@
 
 # Headers in this file shall remain intact.
 
-from flumotion.common import messages
+from flumotion.common import messages, errors
 from flumotion.common.i18n import N_, gettexter
 from flumotion.component import feedcomponent
-from flumotion.worker.checks import check
 
 
 __version__ = "$Rev$"
 T_ = gettexter()
 
+PROFILES={'iphone': 'profile=baseline vbv-buf-capacity=10000 ',
+          'ipod': 'profile=baseline cabac=false vbv-buf-capacity=768 ',
+          'default': 'profile=baseline'
+         }
 
 class X264(feedcomponent.EncoderComponent):
     checkTimestamp = True
     checkOffset = True
 
+    def check_properties(self, props, addMessage):
+        profile = props.get('profile', 'default')
+        if profile not in PROFILES.keys():
+            raise errors.ConfigError("The profile '%s' do not exists.")
+
     def get_pipeline_string(self, properties):
-        return "ffmpegcolorspace ! x264enc name=encoder profile=baseline"
+        profile_str = PROFILES[properties.get('profile', 'default')]
+        return "ffmpegcolorspace ! x264enc name=encoder %s" % profile_str
 
     def configure_pipeline(self, pipeline, properties):
         element = pipeline.get_by_name('encoder')
