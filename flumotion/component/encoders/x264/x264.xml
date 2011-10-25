@@ -27,6 +27,10 @@
                   _description="Custom parameters to pass to x264 encoder." />
         <property name="quality" type="int"
                   _description="Speed/quality tradeoff." />
+        <property name="byte-stream" type="bool"
+                  _description="Generate byte stream format of NALU" />
+        <property name="profile" type="string"
+                  _description="Encoding profile." />
       </properties>
 
     </component>
